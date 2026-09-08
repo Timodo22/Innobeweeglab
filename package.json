@@ -1,0 +1,37 @@
+{
+  "name": "innobeweeglab-evidence-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "From data to evidence-based recommendations \u2014 a research pipeline for InnoBeweegLab",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --force",
+    "db:local": "wrangler d1 execute innobeweeglab --local --file=./migrations/0001_init.sql",
+    "db:remote": "wrangler d1 execute innobeweeglab --remote --file=./migrations/0001_init.sql",
+    "pages:dev": "npm run build && wrangler pages dev",
+    "pages:deploy": "npm run build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "mammoth": "^1.8.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "read-excel-file": "^5.8.5",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "@types/papaparse": "^5.3.15",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wrangler": "^3.95.0"
+  }
+}

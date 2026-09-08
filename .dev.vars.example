@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `wrangler pages dev`. Never commit the real file.
+# Without a key the pipeline still runs end-to-end in deterministic "heuristic" mode.
+ANTHROPIC_API_KEY=sk-ant-...
+# Optional shared-secret gate for the whole API. Leave unset to run open.
+APP_PASSWORD=
+# Optional override; defaults to claude-opus-5
+ANTHROPIC_MODEL=claude-opus-5

@@ -1,0 +1,10 @@
+name = "innobeweeglab-evidence-engine"
+compatibility_date = "2024-11-06"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "innobeweeglab"
+# Replace with the id printed by: wrangler d1 create innobeweeglab
+database_id = "00000000-0000-0000-0000-000000000000"
